@@ -4,22 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEO Hassan Developer | Portfolio</title>
+    <title>Hassan Qurban | Full Stack Web Developer</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body> 
-    <div class="particles">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
 <div class="site-wrapper" style="overflow-x: hidden; width: 100%; position: relative; max-width: 100vw;">
     <nav class="navbar">
-        <div class="logo">MyPortfolio</div>
+        <div class="logo">Hassan<span>.dev</span></div>
         <div class="hamburger" id="hamburger">
             <i class="fas fa-bars"></i>
         </div>
@@ -30,7 +27,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="hire-me-text">
-            <a href="#contact" class="highlight" style="font-weight: 600; font-size: 1.1rem; text-decoration: none; letter-spacing: 1px;">Hire Me</a>
+            <a href="#contact" class="hire-me-btn">Hire Me</a>
         </div>
     </nav>
 
@@ -51,7 +48,7 @@
             </div>
 
             <div class="footer-group">
-                <span class="user-id">CEO Hassan</span>
+                <span class="user-id">Hassan Qurban</span>
                 <div class="glowing-line"></div>
             </div>
         </div>
@@ -60,10 +57,10 @@
 
     <section class="hero" id="hero">
         <div class="hero-content">
-            <i class="fab fa-html5 tech-icon html"></i>
-<i class="fab fa-css3-alt tech-icon css"></i>
-<i class="fab fa-js tech-icon js"></i>
-<i class="fab fa-php tech-icon php"></i>
+            <div class="status-badge">
+                <span class="pulse-dot"></span>
+                <span>Available for new projects</span>
+            </div>
             <h3 class="greeting">Hi, I'm a Professional</h3>
             <h1 class="main-heading">Software Engineer <span class="amp">&</span> <br>
                 <span class="highlight">Full Stack Web Developer</span>
@@ -90,26 +87,20 @@
 
         <div class="hero-image-v2">
             <div class="main-image-container">
-
-                <div class="rotating-ring"></div>
-
-                <div class="image-octo">
-                    <img src="image/my pic.jpeg"
-                        alt="Profile Image">
+                <div class="profile-card">
+                    <img src="image/my pic.jpeg" alt="Profile Image">
                 </div>
-
-                <div class="floating-item item-code animated-float">
-                    <span>{;}</span>
-                </div>
-                
-                <div class="floating-item item-design animated-float-fast">
-                    <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-                            <path d="M2 2l7.586 7.586"></path>
-                            <circle cx="11" cy="11" r="2"></circle>
-                        </svg></span>
+                <div class="floating-code-card">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-file">Developer.php</span>
+                    </div>
+                    <pre class="code-body"><code><span class="keyword">class</span> <span class="class-name">Hassan</span> {
+    <span class="keyword">public</span> <span class="variable">$role</span> = <span class="string">'Full Stack'</span>;
+    <span class="keyword">public</span> <span class="variable">$skills</span> = [<span class="string">'PHP'</span>, <span class="string">'Laravel'</span>];
+}</code></pre>
                 </div>
             </div>
         </div>
@@ -121,7 +112,7 @@
     <section id="about" class="about-v3">
         <div class="about-container">
             <div class="about-header">
-                <span class="sub-title">My Name is Hassan</span>
+                <span class="sub-title">About Me</span>
                 <h2 class="main-title">Professional <span class="highlight">Profile</span></h2>
             </div>
 
@@ -130,7 +121,7 @@
                     <div class="stat-box">
                         <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
                         <h3>Full Stack</h3>
-                        <p>Frontend Expert & Backend Learner</p>
+                        <p>Frontend & PHP/Laravel Web Apps</p>
                     </div>
                 <div class="stat-box active">
     <div class="stat-icon"><i class="fas fa-code"></i></div>
@@ -229,7 +220,7 @@
 
 <div class="counter-box">
 <h2>1+</h2>
-<p>Years Learning</p>
+<p>Years Experience</p>
 </div>
 
 <div class="counter-box">
@@ -243,8 +234,7 @@
         <div class="projects-container">
             <div class="section-title">
                 <span class="sub-title">My Recent Work</span>
-                <h2 class="main-title" style="color: white;">Featured <span class="highlight">Projects</span></h2>
-                <h2 class="main-title" style="color: #38bdf8;">WEBSITE</h2>
+                <h2 class="main-title">Featured <span class="highlight">Projects</span></h2>
                 <div class="underline"></div>
             </div>
 
@@ -255,12 +245,12 @@
                     </div>
                     <div class="project-content">
                         <span class="project-category">Software Development</span>
-                        <h3>Shreak & Juics </h3>
+                        <h3>Shakes & Juices</h3>
 
                         <div class="project-tags">
                             <span>HTML</span>
                             <span>CSS</span>
-                            <span>JAWA SCRIPT J/S</span>
+                            <span>JavaScript</span>
                         </div>
                         <a href="https://hassan2507b.github.io/Shreak-And-Juics/" target="_blank" class="view-site-btn">
                             View Website <i class="fas fa-external-link-alt"></i>
@@ -280,7 +270,7 @@
                             <span>HTML</span>
                             <span>Git</span>
                             <span>CSS</span>
-                            <span>JS</span>
+                            <span>JavaScript</span>
 
                         </div>
                         <a href="https://hassan2507b.github.io/bags/" target="_blank" class="view-site-btn">
@@ -296,13 +286,13 @@
                     </div>
                     <div class="project-content">
                         <span class="project-category">Web UI</span>
-                        <h3>Clint-Protfolio</h3>
+                        <h3>Client Portfolio</h3>
 
                         <div class="project-tags">
                             <span>HTML</span>
                             <span>Git</span>
                             <span>CSS</span>
-                            <span>JS</span>
+                            <span>JavaScript</span>
 
                         </div>
                         <a href="https://hassan2507b.github.io/Clint-Protfolio/" target="_blank" class="view-site-btn">
@@ -324,7 +314,7 @@
         <div class="contact-container">
             <div class="section-title">
                 <span class="sub-title">Get In Touch</span>
-                <h2 class="main-title" style=" color: white;">Contact <span class="highlight">Me</span></h2>
+                <h2 class="main-title">Contact <span class="highlight">Me</span></h2>
                 <div class="underline"></div>
             </div>
 
@@ -384,7 +374,7 @@
 
  <footer class="footer">
     <p>
-        &copy; 2026 CEO Hassan | Full Stack Web Developer
+        &copy; 2026 Hassan Qurban | Full Stack Web Developer
     </p>
 </footer>
 </div>
@@ -399,21 +389,23 @@ document.addEventListener("mousemove",(e)=>{
     glow.style.left = e.clientX - 150 + "px";
     glow.style.top = e.clientY - 150 + "px";
 });
-        // Auto-hide loader after 4.5 seconds
+        // Lock scroll on load
+        document.body.style.overflow = 'hidden';
+
+        // Auto-hide loader after page loads (with a small animation delay)
         window.addEventListener('load', () => {
             setTimeout(() => {
                 const loader = document.getElementById('loader-wrapper');
+                if (loader) {
+                    loader.style.opacity = '0'; // Smooth fade out
+                    loader.style.transition = 'opacity 0.6s ease-out';
 
-
-                loader.style.opacity = '0'; // Smooth fade out
-                loader.style.transition = '1s ease-out';
-
-                setTimeout(() => {
-                    loader.style.display = 'none'; // Completely remove
-                    mainContent.style.display = 'block'; // Show portfolio
-                    document.body.style.overflow = 'auto'; // Enable scroll
-                }, 1000);
-            }, 4500); // 4.5 seconds tak loader dikhega
+                    setTimeout(() => {
+                        loader.style.display = 'none'; // Completely remove
+                        document.body.style.overflow = 'auto'; // Enable scroll
+                    }, 600);
+                }
+            }, 1200); // 1.2 seconds delay for loader animation to look premium
         });
         // Mobile Menu Toggle
         const hamburger = document.getElementById('hamburger');
@@ -483,6 +475,10 @@ let letter = "";
 
 })();
     </script>
+
+
+
+
 </body>
 
 </html>
