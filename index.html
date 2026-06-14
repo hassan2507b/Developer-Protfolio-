@@ -1,484 +1,668 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hassan Qurban | Full Stack Web Developer</title>
-    <!-- Google Fonts: Plus Jakarta Sans -->
+    <title>Hassan Qurban - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+       body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8faff; /* Matching soft background from image */
+        }
+        .hire-card {
+            background-color: #ffffff;
+            border: 1px solid rgba(226, 232, 240, 0.5); /* Light Slate 100 border */
+            border-radius: 12px; /* Smooth corners */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02); /* Soft shadow */
+            padding: 40px 24px; /* Balanced padding */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-height: 250px;
+            transition: all 0.3s ease-in-out;
+        }
+        .hire-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+        }
+        html{
+    scroll-behavior:smooth;
+}
+
+.nav-link{
+    position:relative;
+    padding-bottom:5px;
+    transition:.3s;
+}
+
+.nav-link.active{
+    color:#004899;
+    font-weight:600;
+}
+
+.nav-link.active::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:2px;
+    background:#004899;
+}
+    </style>
 </head>
+<body class="text-slate-700 antialiased">
 
-<body> 
-<div class="site-wrapper" style="overflow-x: hidden; width: 100%; position: relative; max-width: 100vw;">
-    <nav class="navbar">
-        <div class="logo">Hassan<span>.dev</span></div>
-        <div class="hamburger" id="hamburger">
-            <i class="fas fa-bars"></i>
+    <!-- NAVBAR SECTION -->
+    <header class="w-full bg-[#f8faff] border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <div class="flex items-center space-x-2 text-[#004899] font-bold text-xl tracking-tight">
+                <span class="text-lg font-extrabold">&lt;&gt;</span>
+                <span>Hassan Qurban</span>
+            </div>
+<nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+    <a href="#home" class="nav-link active">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#work" class="nav-link">Work</a>
+    <a href="#contact" class="nav-link">Contact</a>
+</nav>
+
+            <!-- Contact Button -->
+          <div>
+    <a href="https://wa.me/923710391108" target="_blank" class="bg-[#004899] text-white px-6 py-2.5 rounded text-sm font-semibold hover:bg-[#003673] transition duration-200 shadow-sm">
+        Contact Me
+    </a>
+</div>
         </div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="hire-me-text">
-            <a href="#contact" class="hire-me-btn">Hire Me</a>
-        </div>
-    </nav>
+    </header>
 
-<div class="cursor-glow"></div>
-
-
- <div id="loader-wrapper">
-        <div class="loader-content">
-            <div class="icon-group">
-                <div class="icon-box icon-1"><span>&lt;/&gt;</span></div>
-                <div class="icon-box icon-2"><span>🥞</span></div>
-                <div class="icon-box icon-3"><span>⚡</span></div>
-            </div>
-
-            <div class="text-group">
-                <h1 class="welcome-text">WELCOME TO MY</h1>
-                <h2 class="portfolio-text">PORTFOLIO WEBSITE</h2>
-            </div>
-
-            <div class="footer-group">
-                <span class="user-id">Hassan Qurban</span>
-                <div class="glowing-line"></div>
-            </div>
-        </div>
-    </div>
-
-
-    <section class="hero" id="hero">
-        <div class="hero-content">
-            <div class="status-badge">
-                <span class="pulse-dot"></span>
-                <span>Available for new projects</span>
-            </div>
-            <h3 class="greeting">Hi, I'm a Professional</h3>
-            <h1 class="main-heading">Software Engineer <span class="amp">&</span> <br>
-                <span class="highlight">Full Stack Web Developer</span>
+    <!-- HERO SECTION -->
+    <main  id="home" class="max-w-7xl mx-auto px-6 pt-16 pb-24 md:pt-24 flex flex-col md:flex-row items-center justify-between gap-12">
+        
+        <!-- Left Column: Content -->
+        <div class="w-full md:w-1/2 space-y-6">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#004899] leading-tight tracking-tight">
+                Hassan Qurban
             </h1>
-            <h2 class="typing-text">
-    <span id="typing"></span>
-</h2>
-            <p class="description">
-                   I develop modern, responsive and high-performance web applications.
-    Specialized in Frontend Development, PHP, Laravel, MySQL and modern web technologies.
+            <p class="text-xl md:text-2xl font-semibold text-slate-600">
+                Full Stack Web Developer
             </p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn-primary">View Projects</a>
-                <a href="https://wa.me/923422004590" target="_blank" class="btn-secondary">Contact Me</a>
+            <p class="text-slate-500 leading-relaxed max-w-xl text-[16px]">
+                I build responsive, scalable, and high-performance web applications using Laravel, PHP, JavaScript, Bootstrap, and modern web technologies.
+            </p>
+            
+            <!-- Call to Actions -->
+        <a href="#work" class="inline-flex items-center bg-[#004899] text-white px-6 py-3 rounded text-sm font-semibold hover:bg-[#003673] transition duration-200 shadow-sm gap-2">
+    View Projects <i class="fa-solid fa-arrow-right text-xs"></i>
+</a>
+               <a href="" download
+class="inline-flex items-center border border-[#004899] text-[#004899] bg-white px-6 py-3 rounded text-sm font-semibold hover:bg-slate-50 transition duration-200 shadow-sm">
+    Download Resume
+</a>
             </div>
         </div>
-        <div class="social-links">
-            <a href="https://wa.me/923422004590" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://github.com/hassan2507b?tab=repositories" class="social-icon"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/hassan-qurban-4848053a6" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-            <a href="mailto:hassan2507b@aptechorangi.com" class="social-icon"><i class="fas fa-envelope"></i></a>
 
+        <!-- Right Column: Image Dashboard/Laptop -->
+        <div class="w-full md:w-1/2 flex justify-end">
+            <div class="relative w-full max-w-md md:max-w-xl aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-slate-200/80 border border-slate-100">
+                <!-- Replace 'image_1d6f97.jpg' with your actual image file path if locally saved -->
+                <img src="pngtree-software-developer-3d-icon-with-sleek-design-isolated-on-white-background-png-image_20174481-removebg-preview.png" alt="Laptop on Desk showing Code" class="w-full h-full object-cover">
+            </div>
         </div>
 
-        <div class="hero-image-v2">
-            <div class="main-image-container">
-                <div class="profile-card">
-                    <img src="image/my pic.jpeg" alt="Profile Image">
+    </main>
+<!-- ABOUT ME SECTION -->
+    <section id="about" class="w-full bg-white py-20 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12">
+            
+            <!-- Left Side: Title & Status -->
+            <div class="md:col-span-4 space-y-6">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-[#004899] relative inline-block pb-3">
+                        About Me
+                        <!-- Underline bar -->
+                        <span class="absolute bottom-0 left-0 w-16 h-1 bg-[#004899] rounded"></span>
+                    </h2>
                 </div>
-                <div class="floating-code-card">
-                    <div class="code-header">
-                        <span class="code-dot red"></span>
-                        <span class="code-dot yellow"></span>
-                        <span class="code-dot green"></span>
-                        <span class="code-file">Developer.php</span>
+
+                <!-- Current Status Box -->
+                <div class="bg-[#f3f6fc] border border-slate-100 p-6 rounded-xl max-w-sm">
+                    <p class="text-xs font-bold tracking-wider text-slate-500 uppercase mb-1">
+                        Current Status
+                    </p>
+                    <p class="text-xl font-bold text-slate-800">
+                        Available for Projects
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side: Description & Stats -->
+            <div class="md:col-span-8 space-y-10">
+                <p class="text-slate-600 leading-relaxed text-[16px]">
+                    I am a Full Stack Web Developer with 1+ year of experience in designing and developing modern websites and web applications. I specialize in HTML, CSS, JavaScript, Bootstrap, PHP, Laravel, Wix, and GitHub. I focus on clean code, responsive design, performance optimization, and delivering high-quality digital solutions for businesses worldwide.
+                </p>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <!-- Stat 1 -->
+                    <div class="border border-slate-100 rounded-xl p-5 text-center bg-white shadow-sm hover:shadow-md transition duration-200">
+                        <p class="text-2xl md:text-3xl font-extrabold text-[#004899]">1+</p>
+                        <p class="text-[11px] font-medium text-slate-500 mt-1">Year Experience</p>
                     </div>
-                    <pre class="code-body"><code><span class="keyword">class</span> <span class="class-name">Hassan</span> {
-    <span class="keyword">public</span> <span class="variable">$role</span> = <span class="string">'Full Stack'</span>;
-    <span class="keyword">public</span> <span class="variable">$skills</span> = [<span class="string">'PHP'</span>, <span class="string">'Laravel'</span>];
-}</code></pre>
+                    <!-- Stat 2 -->
+                    <div class="border border-slate-100 rounded-xl p-5 text-center bg-white shadow-sm hover:shadow-md transition duration-200">
+                        <p class="text-2xl md:text-3xl font-extrabold text-[#004899]">20+</p>
+                        <p class="text-[11px] font-medium text-slate-500 mt-1">Projects Done</p>
+                    </div>
+                    <!-- Stat 3 -->
+                    <div class="border border-slate-100 rounded-xl p-5 text-center bg-white shadow-sm hover:shadow-md transition duration-200">
+                        <p class="text-2xl md:text-3xl font-extrabold text-[#004899]">15+</p>
+                        <p class="text-[11px] font-medium text-slate-500 mt-1">Global Clients</p>
+                    </div>
+                    <!-- Stat 4 -->
+                    <div class="border border-slate-100 rounded-xl p-5 text-center bg-white shadow-sm hover:shadow-md transition duration-200">
+                        <p class="text-2xl md:text-3xl font-extrabold text-[#004899]">100%</p>
+                        <p class="text-[11px] font-medium text-slate-500 mt-1">Satisfaction</p>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 
-
-    <!-- about --> 
-
-    <section id="about" class="about-v3">
-        <div class="about-container">
-            <div class="about-header">
-                <span class="sub-title">About Me</span>
-                <h2 class="main-title">Professional <span class="highlight">Profile</span></h2>
+    <!-- TECHNICAL MASTERY HEADING SECTION -->
+    <section class="w-full bg-[#f8faff] py-16 text-center">
+        <div class="max-w-3xl mx-auto px-6 space-y-2">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-[#004899]">
+                Technical Mastery
+            </h2>
+            <p class="text-slate-600 text-[15px]">
+                Expertise in the modern web development stack
+            </p>
+        </div>
+    </section>
+    <!-- SKILLS CARDS SECTION -->
+    <section id="skills" class="w-full bg-[#f8faff] pb-24">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Frontend Card -->
+            <div class="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-200">
+                <div class="flex items-center space-x-3 text-[#004899] mb-6">
+                    <i class="fa-solid fa-window-maximize text-xl"></i>
+                    <h3 class="text-xl font-bold text-slate-800">Frontend</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-[#f1f5f9] text-slate-600 text-xs font-medium px-3 py-1.5 rounded">HTML5</span>
+                    <span class="bg-[#f1f5f9] text-slate-600 text-xs font-medium px-3 py-1.5 rounded">CSS3</span>
+                    <span class="bg-[#f1f5f9] text-slate-600 text-xs font-medium px-3 py-1.5 rounded">JavaScript</span>
+                    <span class="bg-[#f1f5f9] text-slate-600 text-xs font-medium px-3 py-1.5 rounded">Bootstrap</span>
+                    <span class="bg-[#f1f5f9] text-slate-600 text-xs font-medium px-3 py-1.5 rounded">Responsive Design</span>
+                </div>
             </div>
 
-            <div class="about-content-wrapper">
-                <div class="about-stats">
-                    <div class="stat-box">
-                        <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
-                        <h3>Full Stack</h3>
-                        <p>Frontend & PHP/Laravel Web Apps</p>
-                    </div>
-                <div class="stat-box active">
-    <div class="stat-icon"><i class="fas fa-code"></i></div>
-    <h3>Frontend</h3>
-    <p>Responsive & Interactive Websites</p>
-</div>
+            <!-- Backend Card -->
+            <div class="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-200">
+                <div class="flex items-center space-x-3 text-[#004899] mb-6">
+                    <i class="fa-solid fa-server text-xl"></i>
+                    <h3 class="text-xl font-bold text-slate-800">Backend</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-[#f1f5f9] text-slate-600 text-xs font-medium px-3 py-1.5 rounded">PHP</span>
+                    <span class="bg-[#f1f5f9] text-slate-600 text-xs font-medium px-3 py-1.5 rounded">Laravel</span>
+                    <span class="bg-[#f1f5f9] text-slate-600 text-xs font-medium px-3 py-1.5 rounded">MySQL</span>
+                </div>
+            </div>
 
-<div class="stat-box">
-    <div class="stat-icon"><i class="fas fa-server"></i></div>
-    <h3>Backend</h3>
-    <p>PHP, Laravel & MySQL Development</p>
-</div>
-                    <div class="stat-box">
-                        <div class="stat-icon"><i class="fab fa-git-alt"></i></div>
-                        <h3>Version Control</h3>
-                        <p>Expert in Git & Team Workflows</p>
+            <!-- Tools Card -->
+            <div class="bg-white border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-200">
+                <div class="flex items-center space-x-3 text-[#004899] mb-6">
+                    <i class="fa-solid fa-screwdriver-wrench text-xl"></i>
+                    <h3 class="text-xl font-bold text-slate-800">Tools</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-[#f1f5f9] text-slate-600 text-xs font-medium px-3 py-1.5 rounded">Git</span>
+                    <span class="bg-[#f1f5f9] text-slate-600 text-xs font-medium px-3 py-1.5 rounded">GitHub</span>
+                    <span class="bg-[#f1f5f9] text-slate-600 text-xs font-medium px-3 py-1.5 rounded">VS Code</span>
+                    <span class="bg-[#f1f5f9] text-slate-600 text-xs font-medium px-3 py-1.5 rounded">XAMPP</span>
+                    <span class="bg-[#f1f5f9] text-slate-600 text-xs font-medium px-3 py-1.5 rounded">Wix</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE SECTION -->
+    <section class="w-full bg-[#f8faff] pb-24">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <h2 class="text-3xl font-extrabold text-[#004899] mb-12">
+                Professional Experience
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Side: Timeline & Experience Details -->
+                <div class="lg:col-span-7 relative pl-8 border-l-2 border-[#004899]/30 space-y-6">
+                    
+                    <!-- Timeline Blue Dot -->
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 bg-[#004899] rounded-full border-4 border-[#f8faff]"></div>
+                    
+                    <!-- Job Title & Meta -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900">Full Stack Web Developer</h3>
+                        <p class="text-sm font-semibold text-[#004899] mt-1">
+                            Freelance <span class="text-slate-400 mx-1">|</span> 2024 - Present
+                        </p>
                     </div>
+
+                    <!-- Bullet Points (Custom Square Style) -->
+                    <ul class="space-y-4 text-slate-600 leading-relaxed text-[15px]">
+                        <li class="flex items-start">
+                            <span class="text-[#004899] mr-3 mt-1.5 text-[10px]">&#9632;</span>
+                            <span>Developed responsive business websites with cross-browser compatibility.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#004899] mr-3 mt-1.5 text-[10px]">&#9632;</span>
+                            <span>Built custom Laravel applications for complex business logic and workflows.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#004899] mr-3 mt-1.5 text-[10px]">&#9632;</span>
+                            <span>Integrated backends with MySQL databases for secure and efficient data management.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-[#004899] mr-3 mt-1.5 text-[10px]">&#9632;</span>
+                            <span>Optimized website performance and SEO for improved ranking and load speeds.</span>
+                        </li>
+                    </ul>
                 </div>
 
-      <div class="about-details">
-    <div class="details-card">
-        <h3>Main <span class="highlight">Expertise</span></h3>
+                <!-- Right Side: Highlight Features Side Cards -->
+                <div class="lg:col-span-5 space-y-6">
+                    
+                    <!-- Card 1: High Quality Delivery -->
+                    <div class="bg-white border border-slate-100 p-6 rounded-2xl shadow-sm space-y-3">
+                        <div class="text-[#004899] text-xl">
+                            <i class="fa-regular fa-badge-check fa-solid fa-circle-check"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-950">High-Quality Delivery</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Consistent track record of delivering clean, bug-free, and production-ready code.
+                        </p>
+                    </div>
 
-    <p>
-        As a software engineer, my goal is not only to write code but to create
-        innovative and efficient digital solutions. I specialize in developing
-        responsive, user-friendly, and modern web applications.
-    </p>
+                    <!-- Card 2: On-Time Completion -->
+                    <div class="bg-white border border-slate-100 p-6 rounded-2xl shadow-sm space-y-3">
+                        <div class="text-[#004899] text-xl">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-950">On-Time Completion</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Strict adherence to project deadlines and efficient project management practices.
+                        </p>
+                    </div>
 
-    <p>
-        My expertise includes <strong>Frontend Development</strong> using HTML,
-        CSS, JavaScript, and Bootstrap, along with <strong>Backend Development</strong>
-        using PHP, Laravel, and MySQL to build secure and scalable web systems.
-    </p>
+                </div>
 
-    <div class="tech-stack">
-        <span class="tag">HTML5</span>
-        <span class="tag">CSS3</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">Bootstrap</span>
-        <span class="tag">PHP</span>
-        <span class="tag">Laravel</span>
-        <span class="tag">MySQL</span>
-        <span class="tag">Git</span>
-        <span class="tag">GitHub</span>
-        <span class="tag">REST API</span>
-        <span class="tag">XAMPP</span>
-        <span class="tag">VS Code</span>
+            </div>
+        </div>
+    </section>
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="work" class="w-full bg-white py-20 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <!-- Section Heading -->
+            <div class="text-center mb-16 space-y-2">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-[#004899]">
+                    Featured Projects
+                </h2>
+                <p class="text-slate-500 text-[15px]">
+                    A collection of systems and applications I've built
+                </p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Project Card 1: Business Management -->
+            <div class="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-200 flex flex-col justify-between">
+    <div>
+        <!-- Top Image Banner (Real Image) -->
+        <div class="w-full aspect-[4/3] overflow-hidden bg-[#1a2332]">
+            <!-- Yahan apni image ka naam aur path likhein -->
+            <img src="image/sk websiet.png" alt="Business Management" class="w-full h-full object-cover object-top">
+        </div>
+        
+        <!-- Content -->
+        <div class="p-5 space-y-4">
+            <h3 class="text-xl font-bold text-slate-900 leading-tight">
+                Business<br>Shreak and JUICS
+            </h3>
+            <!-- Tech Tags -->
+            <div class="flex flex-wrap gap-1.5">
+                <span class="bg-[#f1f5f9] text-slate-500 text-[11px] font-medium px-2 py-1 rounded">HTML</span>
+                <span class="bg-[#f1f5f9] text-slate-500 text-[11px] font-medium px-2 py-1 rounded">CSS</span>
+                <span class="bg-[#f1f5f9] text-slate-500 text-[11px] font-medium px-2 py-1 rounded">JavaScript</span>
+                <span class="bg-[#f1f5f9] text-slate-500 text-[11px] font-medium px-2 py-1 rounded">RESPONSIVE DESIGN</span>
+            </div>
+        </div>
+    </div>
+    <!-- Buttons -->
+    <div class="p-5 pt-0 grid grid-cols-2 gap-2">
+        <a href="#" class="border border-[#004899] text-[#004899] text-xs font-semibold py-2 rounded text-center hover:bg-slate-50 transition duration-150">GitHub</a>
+        <a href="https://hassan2507b.github.io/Shreak-And-Juics/" class="bg-[#004899] text-white text-xs font-semibold py-2 rounded text-center hover:bg-[#003673] transition duration-150">Live Demo</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Project Card 2 -->
+<div class="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-200 flex flex-col justify-between">
+    <div>
+        <div class="w-full aspect-[4/3] overflow-hidden bg-[#1a2332]">
+            <img src="image/websites.png" alt="E-Commerce Website" class="w-full h-full object-cover object-top">
+        </div>
+        <div class="p-5 space-y-4">
+            <h3 class="text-xl font-bold text-slate-900 leading-tight">
+                E-Commerce<br>Website
+            </h3>
+
+            <div class="flex flex-wrap gap-1.5">
+                <span class="bg-[#f1f5f9] text-slate-500 text-[11px] font-medium px-2 py-1 rounded">CSS</span>
+                <span class="bg-[#f1f5f9] text-slate-500 text-[11px] font-medium px-2 py-1 rounded">JavaScript</span>
+                <span class="bg-[#f1f5f9] text-slate-500 text-[11px] font-medium px-2 py-1 rounded">RESPONSIVE DESIGN</span>
+            </div>
+        </div>
     </div>
 
-    <div class="experience-badge">
-        <div class="exp-num">100%</div>
-        <div class="exp-text">Commitment to <br> Excellence</div>
+    <div class="p-5 pt-0 grid grid-cols-2 gap-2">
+        <a href="#" class="border border-[#004899] text-[#004899] text-xs font-semibold py-2 rounded text-center hover:bg-slate-50 transition duration-150">GitHub</a>
+        <a href="https://hassan2507b.github.io/Luxury-beauty-Website/" class="bg-[#004899] text-white text-xs font-semibold py-2 rounded text-center hover:bg-[#003673] transition duration-150">Live Demo</a>
     </div>
 </div>
 
-
-</div>
-<div class="skills-progress">
-
-<div class="skill">
-<h4>HTML / CSS</h4>
-<div class="bar"><span style="width:95%"></span></div>
-</div>
-
-<div class="skill">
-<h4>JavaScript</h4>
-<div class="bar"><span style="width:85%"></span></div>
-</div>
-
-<div class="skill">
-<h4>PHP</h4>
-<div class="bar"><span style="width:80%"></span></div>
-</div>
-
-<div class="skill">
-<h4>Laravel</h4>
-<div class="bar"><span style="width:75%"></span></div>
-</div>
-
-</div>
-
-               
-    </section>
-    <section class="counter-section">
-
-<div class="counter-box">
-<h2>15+</h2>
-<p>Projects</p>
-</div>
-
-<div class="counter-box">
-<h2>10+</h2>
-<p>Clients</p>
-</div>
-
-<div class="counter-box">
-<h2>1+</h2>
-<p>Years Experience</p>
-</div>
-
-<div class="counter-box">
-<h2>100%</h2>
-<p>Commitment</p>
-</div>
-
-</section>
-    <!-- Work -->
-    <section id="projects" class="projects-section">
-        <div class="projects-container">
-            <div class="section-title">
-                <span class="sub-title">My Recent Work</span>
-                <h2 class="main-title">Featured <span class="highlight">Projects</span></h2>
-                <div class="underline"></div>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="image/sk websiet.png" alt="Project">
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Software Development</span>
-                        <h3>Shakes & Juices</h3>
-
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <a href="https://hassan2507b.github.io/Shreak-And-Juics/" target="_blank" class="view-site-btn">
-                            View Website <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="image/bag.png" alt="Project">
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Web UI</span>
-                        <h3>Nextag Bag Website</h3>
-
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>Git</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-
-                        </div>
-                        <a href="https://hassan2507b.github.io/bags/" target="_blank" class="view-site-btn">
-                            View Website <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="image/page.png" alt="Project">
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Web UI</span>
-                        <h3>Client Portfolio</h3>
-
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>Git</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-
-                        </div>
-                        <a href="https://hassan2507b.github.io/Clint-Protfolio/" target="_blank" class="view-site-btn">
-                            View Website <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+<!-- Project Card 3 -->
+<div class="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-200 flex flex-col justify-between">
+    <div>
+        <div class="w-full aspect-[4/3] overflow-hidden bg-[#1a2332]">
+            <img src="image/bags.png" alt="Software House Website" class="w-full h-full object-cover object-top">
         </div>
 
+        <div class="p-5 space-y-4">
+            <h3 class="text-xl font-bold text-slate-900 leading-tight">
+                Bags<br>Website
+            </h3>
 
-    </section>
-
-
-    <!-- Contact -->
-
-
-    <section id="contact" class="contact-section">
-        <div class="contact-container">
-            <div class="section-title">
-                <span class="sub-title">Get In Touch</span>
-                <h2 class="main-title">Contact <span class="highlight">Me</span></h2>
-                <div class="underline"></div>
+            <div class="flex flex-wrap gap-1.5">
+                <span class="bg-[#f1f5f9] text-slate-500 text-[11px] font-medium px-2 py-1 rounded">HTML</span>
+                <span class="bg-[#f1f5f9] text-slate-500 text-[11px] font-medium px-2 py-1 rounded">CSS</span>
+                <span class="bg-[#f1f5f9] text-slate-500 text-[11px] font-medium px-2 py-1 rounded">JavaScript</span>
+                <span class="bg-[#f1f5f9] text-slate-500 text-[11px] font-medium px-2 py-1 rounded">Responsive</span>
             </div>
+        </div>
+    </div>
 
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Let's discuss your <span class="highlight">Project</span></h3>
-                    <p>I am always available for projects and creative ideas. You can reach me through the methods given
-                        below.</p>
+    <div class="p-5 pt-0 grid grid-cols-2 gap-2">
+        <a href="#" class="border border-[#004899] text-[#004899] text-xs font-semibold py-2 rounded text-center hover:bg-slate-50 transition duration-150">GitHub</a>
+        <a href="https://hassan2507b.github.io/bags/" class="bg-[#004899] text-white text-xs font-semibold py-2 rounded text-center hover:bg-[#003673] transition duration-150">Live Demo</a>
+    </div>
+</div>
 
-                    <div class="info-list">
-                        <div class="info-item">
-                            <div class="info-icon"><i class="fas fa-envelope"></i></div>
-                            <div class="info-details">
-                                <span>Email Me</span>
-                                <p>hassanwork.pk@gmail.com</p>
-                            </div>
+<!-- Project Card 4 -->
+<div class="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-200 flex flex-col justify-between">
+    <div>
+        <div class="w-full aspect-[4/3] overflow-hidden bg-[#1a2332]">
+            <img src="image/mubi.png" alt="Portfolio Website" class="w-full h-full object-cover object-top">
+        </div>
+
+        <div class="p-5 space-y-4">
+            <h3 class="text-xl font-bold text-slate-900 leading-tight">
+                Portfolio
+            </h3>
+
+            <div class="flex flex-wrap gap-1.5">
+                <span class="bg-[#f1f5f9] text-slate-500 text-[11px] font-medium px-2 py-1 rounded">HTML5</span>
+                <span class="bg-[#f1f5f9] text-slate-500 text-[11px] font-medium px-2 py-1 rounded">CSS3</span>
+                <span class="bg-[#f1f5f9] text-slate-500 text-[11px] font-medium px-2 py-1 rounded">JavaScript</span>
+                <span class="bg-[#f1f5f9] text-slate-500 text-[11px] font-medium px-2 py-1 rounded">Responsive</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-5 pt-0 grid grid-cols-2 gap-2">
+        <a href="#" class="border border-[#004899] text-[#004899] text-xs font-semibold py-2 rounded text-center hover:bg-slate-50 transition duration-150">GitHub</a>
+        <a href="https://hassan2507b.github.io/MubashirBaksh/" class="bg-[#004899] text-white text-xs font-semibold py-2 rounded text-center hover:bg-[#003673] transition duration-150">Live Demo</a>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="w-full bg-white py-24 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            <!-- Left Side: Contact Info -->
+            <div class="lg:col-span-5 space-y-8">
+                <div class="space-y-3">
+                    <h2 class="text-4xl font-extrabold text-[#004899] tracking-tight">
+                        Get In Touch
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-[16px] max-w-md">
+                        Have a project in mind? Let's discuss how I can help you achieve your digital goals.
+                    </p>
+                </div>
+
+                <!-- Info Blocks -->
+                <div class="space-y-6 pt-2">
+                    <!-- Location -->
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-[#e6effa] rounded-lg flex items-center justify-center text-[#004899] flex-shrink-0">
+                            <!-- Custom Location Pin SVG -->
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
                         </div>
-                        <div class="info-item">
-                            <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
-                            <div class="info-details">
-                                <span>WhatsApp</span>
-                                <p>+92 371 0391108</p>
-                            </div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-900">Location</p>
+                            <p class="text-slate-500 text-sm">Karachi, Pakistan</p>
                         </div>
-                        <div class="info-item">
-                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div class="info-details">
-                                <span>Location</span>
-                                <p>Karachi, Pakistan</p>
-                            </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-[#e6effa] rounded-lg flex items-center justify-center text-[#004899] flex-shrink-0">
+                            <!-- Custom Email/Envelope SVG -->
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-900">Email</p>
+                            <p class="text-slate-500 text-sm">hassanwork.pk@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Share/Links -->
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-[#e6effa] rounded-lg flex items-center justify-center text-[#004899] flex-shrink-0">
+                            <!-- Custom Share/Network SVG -->
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.684 10.742l4.632-2.316m0 0a3 3 0 102.684-2.526 3 3 0 00-2.684 2.526zm-4.632 2.732l4.632 2.316m0 0a3 3 0 102.684-2.526 3 3 0 00-2.684 2.526zM8.684 13.474a3 3 0 11-2.684-2.526 3 3 0 012.684 2.526z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex items-center space-x-4 text-slate-500 text-sm font-medium">
+                            <a href="https://github.com/hassan2507b?tab=repositories" class="hover:text-[#004899] transition">GitHub</a>
+                            <a href="www.linkedin.com/in/hassan-qurban-4848053a6" class="hover:text-[#004899] transition">LinkedIn</a>
+                            <a href="https://wa.me/923710391108" target="_blank" class="hover:text-[#004899] transition">
+    WhatsApp
+</a>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="contact-form-card">
-                    <form action="#">
-                        <div class="input-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="input-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="input-group">
-                            <input type="text" placeholder="Subject">
-                        </div>
-                        <div class="input-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="send-btn">
-                            Send Message <i class="fas fa-paper-plane"></i>
+            <!-- Right Side: Contact Form Card -->
+            <div class="lg:col-span-7 bg-white border border-slate-200/60 rounded-2xl p-8 shadow-xl shadow-slate-100/70 w-full max-w-2xl lg:ml-auto">
+                <form class="space-y-5">
+                    
+                    <!-- Full Name -->
+                    <div class="space-y-2">
+                        <label class="text-[14px] font-bold text-slate-900">Full Name</label>
+                        <input type="text" placeholder="Enter your name" 
+                            class="w-full px-4 py-3 rounded-lg border border-slate-300 text-slate-700 placeholder-slate-400 focus:outline-none focus:border-[#004899] focus:ring-1 focus:ring-[#004899] text-sm transition">
+                    </div>
+
+                    <!-- Email Address -->
+                    <div class="space-y-2">
+                        <label class="text-[14px] font-bold text-slate-900">Email Address</label>
+                        <input type="email" placeholder="Enter your email" 
+                            class="w-full px-4 py-3 rounded-lg border border-slate-300 text-slate-700 placeholder-slate-400 focus:outline-none focus:border-[#004899] focus:ring-1 focus:ring-[#004899] text-sm transition">
+                    </div>
+
+                    <!-- Subject -->
+                    <div class="space-y-2">
+                        <label class="text-[14px] font-bold text-slate-900">Subject</label>
+                        <input type="text" placeholder="Project inquiry" 
+                            class="w-full px-4 py-3 rounded-lg border border-slate-300 text-slate-700 placeholder-slate-400 focus:outline-none focus:border-[#004899] focus:ring-1 focus:ring-[#004899] text-sm transition">
+                    </div>
+
+                    <!-- Message -->
+                    <div class="space-y-2">
+                        <label class="text-[14px] font-bold text-slate-900">Message</label>
+                        <textarea rows="5" placeholder="Tell me about your project" 
+                            class="w-full px-4 py-3 rounded-lg border border-slate-300 text-slate-700 placeholder-slate-400 focus:outline-none focus:border-[#004899] focus:ring-1 focus:ring-[#004899] text-sm transition resize-none"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-2">
+                        <button type="submit" 
+                            class="w-full bg-[#004899] text-white font-bold py-4 rounded-lg hover:bg-[#003673] transition duration-200 text-base shadow-sm">
+                            Send Message
                         </button>
-                    </form>
-                </div>
+                    </div>
+
+                </form>
             </div>
+
         </div>
-    </section>
+    </section> <!-- FOOTER SECTION -->
+    <footer class="w-full bg-white border-t border-slate-100 py-8">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+            
+            <div class="text-[#004899] font-bold text-lg tracking-tight">
+                Hassan Qurban
+            </div>
 
- <footer class="footer">
-    <p>
-        &copy; 2026 Hassan Qurban | Full Stack Web Developer
-    </p>
-</footer>
-</div>
+            <!-- Center: Copyright & Tech Note -->
+            <div class="text-slate-500 text-center md:text-left font-normal">
+                &copy; 2026 Hassan Qurban. All rights reserved. Built with technical mastery.
+            </div>
 
-    <!-- Go to Home Screen Button -->
-    <button id="goHomeBtn" class="go-home-btn">Go to Home Screen <i class="fas fa-arrow-up" style="margin-left: 5px;"></i></button>
+            <!-- Right: Social Links -->
+            <div class="flex items-center space-x-4 text-slate-600 font-medium">
+                <a href="https://www.linkedin.com/in/hassan-qurban-4848053a6" target="_blank" class="hover:text-[#004899] transition duration-150">LinkedIn</a>
+                <a href="https://github.com/hassan2507b" target="_blank" class="hover:text-[#004899] transition duration-150">GitHub</a>
+                <a href="https://wa.me/923710391108" target="_blank" class="hover:text-[#004899] transition duration-150">WhatsApp</a>
+            </div>
 
-    <script>
-        const glow = document.querySelector(".cursor-glow");
+        </div>
+    </footer>
+<!-- MOBILE BOTTOM NAVIGATION BAR -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-100 shadow-[0_-4px_10px_rgba(0,0,0,0.03)] z-50">
+        <div class="flex items-center justify-around py-3 px-2">
+            
+            <!-- Home Item (Active State) -->
+            <a href="#home" class="flex flex-col items-center space-y-1 group text-[#004899]">
+                <!-- Custom Home SVG Icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                </svg>
+                <span class="text-[11px] font-semibold tracking-wide">Home</span>
+            </a>
 
-document.addEventListener("mousemove",(e)=>{
-    glow.style.left = e.clientX - 150 + "px";
-    glow.style.top = e.clientY - 150 + "px";
+            <!-- About Item -->
+            <a href="#about" class="flex flex-col items-center space-y-1 group text-slate-500 hover:text-[#004899] transition">
+                <!-- Custom User/About SVG Icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+                <span class="text-[11px] font-medium tracking-wide">About</span>
+            </a>
+
+            <!-- Skills Item -->
+            <a href="#skills" class="flex flex-col items-center space-y-1 group text-slate-500 hover:text-[#004899] transition">
+                <!-- Custom Skills/Terminal SVG Icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <span class="text-[11px] font-medium tracking-wide">Skills</span>
+            </a>
+
+            <!-- Work Item -->
+            <a href="#work" class="flex flex-col items-center space-y-1 group text-slate-500 hover:text-[#004899] transition">
+                <!-- Custom Work/Briefcase SVG Icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                <span class="text-[11px] font-medium tracking-wide">Work</span>
+            </a>
+
+            <!-- Contact Item -->
+            <a href="#contact" class="flex flex-col items-center space-y-1 group text-slate-500 hover:text-[#004899] transition">
+                <!-- Custom Contact/Envelope SVG Icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                <span class="text-[11px] font-medium tracking-wide">Contact</span>
+            </a>
+
+        </div>
+    </div>
+<script>
+const sections = document.querySelectorAll("section[id], main[id]");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if(link.getAttribute("href") === "#" + current){
+            link.classList.add("active");
+        }
+    });
 });
-        // Lock scroll on load
-        document.body.style.overflow = 'hidden';
-
-        // Auto-hide loader after page loads (with a small animation delay)
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                const loader = document.getElementById('loader-wrapper');
-                if (loader) {
-                    loader.style.opacity = '0'; // Smooth fade out
-                    loader.style.transition = 'opacity 0.6s ease-out';
-
-                    setTimeout(() => {
-                        loader.style.display = 'none'; // Completely remove
-                        document.body.style.overflow = 'auto'; // Enable scroll
-                    }, 600);
-                }
-            }, 1200); // 1.2 seconds delay for loader animation to look premium
-        });
-        // Mobile Menu Toggle
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-        const hireMe = document.querySelector('.hire-me-text');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hireMe.classList.toggle('active');
-            hamburger.querySelector('i').classList.toggle('fa-times');
-            hamburger.querySelector('i').classList.toggle('fa-bars');
-        });
-
-        // Close menu when a link is clicked
-        document.querySelectorAll('.nav-links li a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                hireMe.classList.remove('active');
-                hamburger.querySelector('i').classList.add('fa-bars');
-                hamburger.querySelector('i').classList.remove('fa-times');
-            });
-        });
-        
-        // Go to Home Button functionality
-        const goHomeBtn = document.getElementById('goHomeBtn');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                goHomeBtn.classList.add('show');
-            } else {
-                goHomeBtn.classList.remove('show');
-            }
-        });
-        
-        goHomeBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-        const texts = [
-  "Frontend Developer",
-  "PHP Developer",
-  "Laravel Developer",
-  "Software Engineer"
-];
-
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
-
-(function type() {
-
-  if(count === texts.length){
-    count = 0;
-  }
-
-  currentText = texts[count];
-  letter = currentText.slice(0, ++index);
-
-  document.getElementById("typing").textContent = letter;
-
-  if(letter.length === currentText.length){
-      count++;
-      index = 0;
-      setTimeout(type,1000);
-  }else{
-      setTimeout(type,100);
-  }
-
-})();
-    </script>
-
-
-
-
+</script>
 </body>
-
 </html>
